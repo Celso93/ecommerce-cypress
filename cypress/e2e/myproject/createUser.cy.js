@@ -2,7 +2,7 @@
 
 describe('Creating a user', () => {
     beforeEach(() => {
-      cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+      cy.visit('/customer/account/create/')
     })
 
     it.only('Success', () => {
