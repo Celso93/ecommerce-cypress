@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://magento.softwaretestingboard.com',
-    defaultCommandTimeout: 6000,
+    defaultCommandTimeout: 7000,
     watchForFileChanges: false,
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
