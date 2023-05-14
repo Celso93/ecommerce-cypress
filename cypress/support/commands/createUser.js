@@ -1,6 +1,5 @@
 Cypress.Commands.add('createUser', () => {
-    let randomNumber = Math.floor(Math.random() * 1000);
-    let randomEmail = `teste+${randomNumber}@mailinator.com`
+    let randomEmail = `teste+${Math.floor(Math.random() * 1000)}@mailinator.com`
 
     cy.writeFile('cypress/fixtures/users.json', { "email": randomEmail})
     cy.get("#firstname").type('Jose')
