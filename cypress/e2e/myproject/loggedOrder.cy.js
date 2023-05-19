@@ -1,17 +1,16 @@
 /// <reference types="cypress" />
 
 describe('Logged User', () => {
-  before(function () {
+  beforeEach(() => {
     cy.visit('/customer/account/')
     cy.fixture('users').then(function (user) { 
       this.user = user;
     })
-    cy.login(this.user.email)
-    cy.get("h1[class='page-title']")
-      .contains('My Account', { matchCase: false }) 
   })
 
   it('Place Order', function () {
+    cy.login(this.user.email)
+    cy.get("h1[class='page-title']").contains('My Account', { matchCase: false }) 
     cy.searchAProduct('Shirt')
     cy.addConfigurableProductToCart()
     cy.accessingCartPage()
