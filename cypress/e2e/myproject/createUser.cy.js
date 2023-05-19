@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference types="cypress"/>
 
 describe('Creating a user', () => {
     beforeEach(() => {
@@ -7,6 +7,7 @@ describe('Creating a user', () => {
 
     it.only('Success', () => {
       cy.createUser()
-      cy.get("div[class='page messages']").contains('Thank you for registering with Main Website Store.', { matchCase: false }) 
+      cy.get("div[class='page messages']")
+        .contains('Thank you for registering with Main Website Store.', { matchCase: false }) 
     })
 })
